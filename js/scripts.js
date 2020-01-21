@@ -5,9 +5,12 @@ $(document).ready(function(){
     var upperCase = listArray.map(function(item){
       return item.toUpperCase();
     });
+    upperCase.sort();
     upperCase.forEach(function(item){
       $("#list").append("<li>" + item + "</li>");
     })
+    $("#form").hide();
+
     event.preventDefault();
   })
 });
